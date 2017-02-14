@@ -1,0 +1,48 @@
+{
+  "name": "foodtruck-api",
+  "version": "0.0.1",
+  "description": "Food Truck API for RESTful API",
+  "main": "dist",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "NODE_ENV=production pm2 start dist",
+    "prestart": "npm run -s build",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "author": "Rickey Hrabowskie <rjhrabowskie@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "express-jwt": "^5.1.0",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.8.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.15.0",
+    "nodemon": "^1.11.0"
+  }
+}
