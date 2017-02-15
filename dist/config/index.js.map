@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/config/index.js"],"names":[],"mappings":";;;;;kBAAe;AACb,UAAQ,IADK;AAEb,cAAY,yCAFC;AAGb,eAAa;AAHA,C","file":"index.js","sourcesContent":["export default {\n  \"port\": 3005,\n  \"mongoUrl\": \"mongodb://localhost:27017/foodtruck-api\",\n  \"bodyLimit\": \"100kb\"\n}\n"]}
